@@ -12,15 +12,61 @@
 
 <span>Printer Status: {{classStatus}}<ion-icon name="bluetooth-outline" [ngClass]="classStatus"></ion-icon></span>
   
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <form>
+        <div class="form-group">
+            <fieldset class="form-group">
+    
+                <label>Upload PDF</label>
+                {{imageError}}
+                <div class="custom-file fileInputProfileWrap">
+                    <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                    <div class="img-space">
+                        <ng-container *ngIf="isImageSaved; else elseTemplate">
+                          <ion-icon name="thumbs-up-outline"></ion-icon>
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                          <ion-icon name="thumbs-down"></ion-icon>
+                        </ng-template>  
+                    </div>
+    
+                </div>
+            </fieldset>
+        </div>
+        <ion-button color="danger" (click)="removeImage()"  [disabled]="!isImageSaved"><ion-icon name="trash"></ion-icon>Remove</ion-button>
+    </form>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="connectPrinter()">Start Printer</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="printText()">Print text [TOP RIGHT]</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="printPDF()" [disabled]="!isImageSaved"><ion-icon name="print"></ion-icon> Print PDF 3x4</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="printPDF13()"  [disabled]="!isImageSaved"><ion-icon name="print"></ion-icon> Print PDF 1x3</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
   
-  <div id="container">
 
-    <ion-button expand="block" (click)="connectPrinter()">Start Printer</ion-button>
-    <hr>
-    <ion-button expand="block" (click)="printText()">Print text [TOP RIGHT]</ion-button>
-    <hr>
-    <ion-button expand="block" (click)="printPDF()">Print PDF</ion-button>
-    <hr>
 
-   </div>
+
+
+
+
+
 </ion-content>

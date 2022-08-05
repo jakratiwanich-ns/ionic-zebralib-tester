@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:capacitor": "ng build --aot && ionic capacitor sync",
+    "build:capacitor": "npm run update:zebra && ng build --aot && ionic capacitor sync",
     "deploy:ios": "ionic capacitor open ios",
     "update:zebra": "npm update @dolosplus/zebra-capacitor"
   },
