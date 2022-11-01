@@ -28,7 +28,7 @@
     "@capacitor/haptics": "1.0.1",
     "@capacitor/ios": "3.0.1",
     "@capacitor/keyboard": "1.0.1",
-    "@dolosplus/zebra-capacitor": "file:../zebralib",
+    "@dolosplus/zebra-capacitor": "^0.0.9",
     "@ionic-native/core": "^5.33.1",
     "@ionic-native/device": "^5.33.1",
     "@ionic-native/dialogs": "^5.33.1",
