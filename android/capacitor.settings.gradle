@@ -11,5 +11,8 @@ project(':capacitor-haptics').projectDir = new File('../node_modules/@capacitor/
 include ':capacitor-keyboard'
 project(':capacitor-keyboard').projectDir = new File('../node_modules/@capacitor/keyboard/android')
 
+include ':capacitor-status-bar'
+project(':capacitor-status-bar').projectDir = new File('../node_modules/@capacitor/status-bar/android')
+
 include ':dolosplus-zebra-capacitor'
-project(':dolosplus-zebra-capacitor').projectDir = new File('../../zebralib/android')
+project(':dolosplus-zebra-capacitor').projectDir = new File('../../zebralib-cap4/android')
